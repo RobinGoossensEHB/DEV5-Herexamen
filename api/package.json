@@ -1,0 +1,32 @@
+{
+  "name": "DEV5_Herexamen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prod": "start index.js",
+    "start": "nodemon --legacy-watch src/index.js",
+    "test": "jest --watchAll --detect-open-handles",
+    "test-ci": "jest --detect-open-handles --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinGoossensEHB/DEV5-Herexamen"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinGoossensEHB/DEV5-Herexamen"
+  },
+  "homepage": "https://github.com/RobinGoossensEHB/DEV5-Herexamen#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^27.3.1",
+    "knex": "^0.95.14",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "supertest": "^6.1.6"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

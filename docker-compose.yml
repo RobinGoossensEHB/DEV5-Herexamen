@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  db:
+    image: "postgres:latest"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DATABASE: 
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD: 
+    volumes:
+      - ./_volumes:/var/lib/postgresql/data
+
+  api:
+    env_file:
+      - .env
+    build: ./api
+    container_name: "api"
+    ports:
+      - 3000:3000
+    environment:
+      POSTGRES_DATABASE: 
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD: 
+      POSTGRES_HOST: db
+    volumes:
+      - ./api/src:/api/src
+  
